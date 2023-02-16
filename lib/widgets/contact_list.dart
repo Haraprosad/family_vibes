@@ -8,6 +8,7 @@ class ContactList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(padding: const EdgeInsets.only(top: 10),
       child: ListView.builder(
+        shrinkWrap: true,
         itemCount: info.length,
           itemBuilder: (ctx,index){
         return InkWell(
@@ -26,6 +27,7 @@ class ContactList extends StatelessWidget {
                     style: const TextStyle(fontSize: 15),),
                   ),
                   leading: CircleAvatar(
+                    radius: 30,
                     backgroundImage: NetworkImage(
                       info[index]['profilePic'].toString()
                     ),
